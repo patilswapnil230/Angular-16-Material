@@ -1,0 +1,22 @@
+<div class="sidebar-accordion" appAccordionSidebar [id]="id">
+
+  <section class="sidebar-accordion-header" (click)="onExpand()">
+    <mat-icon color="primary">{{item.icon}}</mat-icon>
+    <span *ngIf="!resize" class="accordion-label">{{item.text}}</span>
+    <div class="sidebar-accordion-arrows">
+      <mat-icon class="expand-more">expand_more</mat-icon>
+      <mat-icon class="expand-less">expand_less</mat-icon>
+    </div>
+  </section>
+  
+  <section class="sidebar-accordion-body">
+    <div class="sidebar-accordion-items">
+        <!-- SUB ITEMS  -->
+      <app-sidebar-item *ngFor="let subItem of item.subItems" 
+                        [item]="subItem"
+                        [resize]="resize"
+                        [subItem]="true"
+                        [accordionId]="id"></app-sidebar-item>
+    </div>
+  </section>
+</div>

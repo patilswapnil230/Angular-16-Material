@@ -1,0 +1,25 @@
+<aside appResizeSidebar>
+  <section class="sidebar-toogle-container">
+    <button mat-icon-button (click)="onResizeSidebar()">
+        <mat-icon>{{ resize ? 'arrow_right' : 'arrow_left'}}</mat-icon>
+    </button>
+  </section>
+
+  <section class="sidebar-items">
+
+    <ng-container *ngFor="let item of sidebarItems | async; index as i">
+
+      <app-sidebar-item *ngIf="!item.subItems" 
+                        [item]="item"
+                        [resize]="resize"></app-sidebar-item>
+
+      <app-sidebar-item-accordion *ngIf="item.subItems && item.subItems.length > 0" 
+                                  [item]="item"
+                                  [resize]="resize"
+                                  [id]="i"></app-sidebar-item-accordion>
+    </ng-container>
+
+  </section>
+
+  <app-footer [style.opacity]="resize ? 0 : 1"></app-footer>
+</aside>

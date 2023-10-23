@@ -1,0 +1,11 @@
+div {
+   display: flex;
+   align-items: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}

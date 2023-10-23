@@ -1,0 +1,22 @@
+mat-toolbar {
+  display: grid;
+  grid-template-areas: "sidebarToggle navItems profile";
+  grid-template-columns: auto 1fr auto;
+  height: var(--header-height);
+}
+
+.sidebar-toggle {
+  grid-area: sidebarToggle;
+  display: none;
+}
+
+app-profile-menu {
+  grid-area: profile;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+}

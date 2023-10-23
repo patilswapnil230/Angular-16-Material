@@ -1,0 +1,10 @@
+<!-- LAYOUT -->
+<app-header (toggleSidebar)="showSidebar = !showSidebar"></app-header>
+
+<app-sidebar [class.sidebar-show]="showSidebar"></app-sidebar>
+
+<main [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
+
+<app-backdrop [show]="showSidebar" (click)="showSidebar = !showSidebar"></app-backdrop>

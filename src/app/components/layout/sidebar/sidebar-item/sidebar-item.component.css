@@ -1,0 +1,26 @@
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--sidebar-padding);
+  margin: 10px 0;
+  min-height: 63px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.sidebar-item mat-icon {
+  margin-right: 0.2em;
+}
+
+.sidebar-sub-item {
+  min-height: initial;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.25);
+  outline: none;
+}

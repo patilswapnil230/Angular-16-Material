@@ -1,0 +1,12 @@
+:host {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 768px) {
+
+  :host {
+    display: block;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,17 @@
+:host {
+  display: grid;
+  place-items: center;
+  grid-gap: var(--grid-default-gap);
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+a.email {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}

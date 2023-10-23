@@ -1,0 +1,8 @@
+<div matRipple class="sidebar-item" 
+     [class.sidebar-sub-item]="subItem"
+     routerLink="{{item.link}}" routerLinkActive="active">
+
+  <mat-icon color="primary">{{item.icon}}</mat-icon>
+  <span *ngIf="!resize" class="sidebar-item-text">{{item.text}}</span>
+
+</div>
